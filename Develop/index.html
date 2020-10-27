@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link 
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" 
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -30,9 +34,93 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <div class="row no-gutters">
+        <div class="col hour" id="9am">
+          <p data-time="09">9AM</p>
+        </div>
+        <div class="col-10 time-block">
+          <p class="w-100 h-100 description" id="9P"></p>
+        </div>
+        <button class="btn saveBtn col" id="09Btn" data-time="9"><span class="oi oi-box"></span></button>
+      </div>
+      <div class="row no-gutters">
+        <div class="col hour" id="10am">
+          <p data-time="10">10AM</p>
+        </div>
+        <div class="col-10 time-block">
+          <p class="w-100 h-100 description" id="10P"></p>
+        </div>
+        <button class="btn saveBtn col" id="10Btn" data-time="10"><span class="oi oi-box"></span></button>
+      </div>
+      <div class="row no-gutters">
+        <div class="col hour" id="11am">
+          <p data-time="11">11AM</p>
+        </div>
+        <div class="col-10 time-block">
+          <p class="w-100 h-100 description" id="11P"></p>
+        </div>
+        <button class="btn saveBtn col" id="11Btn" data-time="11"><span class="oi oi-box"></span></button>
+      </div>
+      <div class="row no-gutters">
+        <div class="col hour" id="12pm">
+          <p data-time="12">12PM</p>
+        </div>
+        <div class="col-10 time-block">
+          <p class="w-100 h-100 description" id="12P"></p>
+        </div>
+        <button class="btn saveBtn col" id="12Btn" data-time="12"><span class="oi oi-box"></span></button>
+      </div>
+      <div class="row no-gutters">
+        <div class="col hour" id="1pm">
+          <p data-time="13">1PM</p>
+        </div>
+        <div class="col-10 time-block">
+          <p class="w-100 h-100 description" id="13P"></p>
+        </div>
+        <button class="btn saveBtn col" id="13Btn" data-time="13"><span class="oi oi-box"></span></button>
+      </div>
+      <div class="row no-gutters">
+        <div class="col hour" id="2pm">
+          <p data-time="14">2PM</p>
+        </div>
+        <div class="col-10 time-block">
+          <p class="w-100 h-100 description" id="14P"></p>
+        </div>
+        <button class="btn saveBtn col" id="14Btn" data-time="14"><span class="oi oi-box"></span></button>
+      </div>
+      <div class="row no-gutters">
+        <div class="col hour" id="3pm">
+          <p data-time="15">3PM</p>
+        </div>
+        <div class="col-10 time-block">
+          <p class="w-100 h-100 description" id="15P"></p>
+        </div>
+        <button class="btn saveBtn col" id="15Btn" data-time="15"><span class="oi oi-box"></span></button>
+      </div>
+      <div class="row no-gutters">
+        <div class="col hour" id="4pm" data-time="16">
+          <p data-time="16">4PM</p>
+        </div>
+        <div class="col-10 time-block">
+          <p class="w-100 h-100 description" id="16P"></p>
+        </div>
+        <button class="btn saveBtn col" id="16Btn" data-time="16"><span class="oi oi-box"></span></button>
+      </div>
+      <div class="row no-gutters">
+        <div class="col hour" id="5pm" data-time="17">
+          <p data-time="17">5PM</p>
+        </div>
+        <div class="col-10 time-block">
+          <p class="w-100 h-100 description" id="17P"></p>
+        </div>
+        <button class="btn saveBtn col" id="17Btn" data-time="17"><span class="oi oi-box"></span></button>
+      </div>
+          
+      
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
