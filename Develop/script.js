@@ -6,12 +6,10 @@ var displayCurrentDay = function() {
 };
 
 var auditTask = function () { 
+  // Update colors of timeblocks based on time
   $(".hour > p").each(function(){
     var time;
     time = moment().format("YYYY-MM-DD " + $(this).attr("data-time"));
-
-    console.log(time);
-    console.log(moment().isAfter(time,"hour"));
 
     if (moment().isAfter(time,"hour")) {
       $(this).parent().siblings(".time-block").removeClass("present future");
@@ -54,8 +52,6 @@ $(".time-block").on("blur", "textarea", function () {
     .trim();
 
   var tempID = $(this).attr("data-tempid");
-  console.log($(this));
-  console.log(tempID);
   // recreate p element
   var taskP = $("<p>")
     .addClass("description w-100 h-100")
@@ -79,10 +75,12 @@ $(".saveBtn").on("click", function() {
 });
 
 var saveTasks = function () {
+  // Save tasks to local storage
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
 var loadTasks = function () {
+  // Load tasks from local storage
   tasks = JSON.parse(localStorage.getItem("tasks"));
 
   if (!tasks) {
@@ -95,9 +93,10 @@ var loadTasks = function () {
 };
 
 setInterval(function () {
+  // Periodically update display of current day and colors of timeblocks
   displayCurrentDay;
   auditTask;
-}, 1800000);
+}, 60000);
 
 displayCurrentDay();
 loadTasks();
